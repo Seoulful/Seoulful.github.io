@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width">
         <title>Glenn Han's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="CSS Stylesheet/portfolio.css">
+        <script src="/JavaScript/main.js"></script>
     </head>
 
     <!--BODY-->
@@ -47,6 +48,53 @@
                     <br> Thank you for stopping by and enjoy!
                 </p>
             </strong>
+        </div>
+
+        <!-- SLIDESHOW-->
+        <div id="slideshow">
+            <div id="slideshow_background">
+                <div id="slideshow_container">
+                    <!-- Slide 1 of 5-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/unity_original.png" alt="Unity logo">
+                        <div class="text"></div>
+                    </div>
+                    <!-- Slide 2 of 5-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="images/unreal_original.png" alt="Unreal Engine logo">
+                        <div class="text"></div>
+                    </div>
+                    <!-- Slide 3 of 5-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="" alt="">
+                        <div class="text"></div>
+                    </div>
+                    <!-- Slide 4 of 5-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="" alt="">
+                        <div class="text"></div>
+                    </div>
+                    <!-- Slide 5 of 5-->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="" alt="">
+                        <div class="text"></div>
+                    </div>
+                    <!-- Next and Previous buttons -->
+                    <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+
+                <br>
+
+                <!-- Slideshow dots -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
         </div>
 
         <!--ABOUT-->
@@ -91,18 +139,40 @@
             </div>
         </div>
 
-        <!--CONTACT SECTION-->
+        <!-- CONTACT SECTION -->
+        <div id="contact">
+            <button onclick="openForm()" class="pop_up_button">Contact</button>
+            <div class="form-popup" id="myForm">
+                <form action="" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="name"><b>Phone</b></label>
+                        <input type="text" placeholder="Type your phone number here" name="name">
+                    <label for="name"><b>Email</b></label>
+                        <input type="text" placeholder="Type your email here" name="name" required>
+                    <label for="name"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="name">
+
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- OLD CONTACT SECTION
+        --CONTACT SECTION--
         <div class="row" id="contact">
 
-            <!--CONTACT IMAGE/LEFT COLUMN-->
+            --CONTACT IMAGE/LEFT COLUMN--
             <div class="column_2 column_tall">
                 <img src="images/pexels-chepté-cormani-1416530.jpg" alt="Contact Image">
             </div>
 
-            <!--CONTACT FORM/RIGHT COLUMN-->
+            --CONTACT FORM/RIGHT COLUMN--
             <div class="column_1 column_tall">
                 <h1>Contact</h1>
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                <form action="" method="POST"> -- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute --
                     <label>Name:</label>
                         <input type="text" placeholder="Please enter your name here">
                     <label>Email:</label>
@@ -111,7 +181,7 @@
                         <input type="text" id="Message" name="Message" placeholder="Please write your message here">
                         <input type="submit" value="SUBMIT">
             </div>
-        </div>
+        </div> -->
 
         <!--FOOTER-->
         <footer>
